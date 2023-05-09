@@ -22,12 +22,12 @@ sudo apt install -y python3-venv
 python3 -m venv <nombre_del_ambiente_virtual>
 #activa el ambiente virtual
 source <nombre_del_ambiente_virtual>/bin/activate
-# deactivate #comando para descativar el v_env
+# deactivate #comando para desactivar el v_env
 pip3 freeze #muestra los packg instalados
 pip3 install <paquete>
 pip3 install <paquete>==<version_especifica_del_paquete>
 ```
-Ahora bien, existe una manera de automatizar el proceso guardando los paquetes que deben instalarse en un archivo .txt que llamaremos requirements.txr
+Ahora bien, existe una manera de automatizar el proceso guardando los paquetes que deben instalarse en un archivo .txt que llamaremos requirements.txt
 
 ```sh
 #asigna todo los paquetes instalados al archivo 
@@ -45,6 +45,8 @@ pip3 install -r requirements.txt
 #clonar el proyecto a tu computadora
 git clone
 cd app
+#crea el ambiente virtual
+python3 -m venv env
 #activar en ambiente virtual
 source env/bin/activate
 #instalar los pksg o dependencias
