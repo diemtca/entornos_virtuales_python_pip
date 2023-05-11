@@ -54,3 +54,35 @@ pip3 install -r requirements.txt
 
 python3 main.py
 ```
+
+# Web-server lo que necesitas saber
+
+Crear un servidor web
+
+Fastapi es la libreria de python que usamos para construir el servidor web
+
+Uvicorn es un servidor que nos ayuda a lanzar en linea el servidor que construimos
+```sh
+#instalar las fastapi de python
+pip3 install fastapi
+pip3 instal "uvircorn[standard]"
+#añade los paquetes en el requirements.txt
+pip3 freeze >requirements.txt
+
+```
+# Web-server
+
+
+```sh
+#clonar el proyecto a tu computadora
+git clone
+cd web-server
+#crea el ambiente virtual
+python3 -m venv env
+#activar en ambiente virtual
+source env/bin/activate
+#instalar los pksg o dependencias
+pip3 install -r requirements.txt
+
+uvircorn main:app --reload
+```
