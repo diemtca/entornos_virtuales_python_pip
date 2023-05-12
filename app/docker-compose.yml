@@ -1,0 +1,10 @@
+services: 
+  app-csv:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+    #enlazamos los script con el contenedor de docker
+    # ":" es para enlazar
+    # "." todos los archivos
+      - .:/app
