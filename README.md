@@ -54,7 +54,27 @@ pip3 install -r requirements.txt
 
 python3 main.py
 ```
+# App Project with docker
 
+Utilizamos docker para aislar completamente las apps de python, en este caso SCRIPTS: en versiones de python, en este lenguaje de programación sin importar que sistema operativo quiera correr el proyecto sin siquiera instalar python en la computadora local, y asi correr cualquier lenguaje en el contenedor
+
+```sh
+#clonar el proyecto a tu computadora
+git clone
+cd app
+#construir el contenedor con docker
+docker-compose build
+# lanzar el contenedor
+docker-compose up -d
+#verificamos el estado del contenedor
+docker-compose ps
+#ingresamos al contenedor
+docker-compose exec app-csv bash
+```
+Puedes ir al localhost:8000 y ver correr el web-server 
+localhost:8000
+localhost:8000/contact
+localhost:8000/contactHtml
 # Web-server lo que necesitas saber
 
 Crear un servidor web
@@ -70,7 +90,7 @@ pip3 instal "uvircorn[standard]"
 pip3 freeze >requirements.txt
 
 ```
-# Web-server
+# Web-server Project
 
 
 ```sh
@@ -86,3 +106,27 @@ pip3 install -r requirements.txt
 
 uvircorn main:app --reload
 ```
+# Web-server Project
+
+Utilizamos docker para crear un contenedor para correr un servicio (servidor web) que se va mantener al aire y desplegarlo facilmente a la nube
+
+```sh
+#clonar el proyecto a tu computadora
+git clone
+cd web-server
+#construir el contenedor con docker
+docker-compose build
+# lanzar el contenedor
+docker-compose up -d
+#verificamos el estado del contenedor
+docker-compose ps
+```
+Puedes ir al localhost:8080 y ver correr el web-server en un contenedor
+
+localhost:8080
+localhost:8080/contact
+localhost:8080/contactHtml
+
+Dockerizamos una aplicación web, la cual esta muy cerca de ser lanzada a desarrollo
+
+Sigue aprendiendo!
