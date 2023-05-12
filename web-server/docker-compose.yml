@@ -1,0 +1,13 @@
+services: 
+  web-server:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      #enlazamos los script con el contenedor de docker
+      # ":" es para enlazar
+      # "." todos los archivos
+      - .:/app
+    ports:
+      #enlazamos los puertos. el puerto de la maquina con el puerto del contenedor
+      - '8080:80'
